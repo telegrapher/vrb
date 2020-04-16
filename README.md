@@ -12,9 +12,11 @@ import "github.com/telegrapher/vrb"
 
 ...
 
-// Enable the verbose messages if verboseBoolean == true
 // Write the verbose messages to os.Stderr
-vrb.Init(verboseBoolean, os.Stderr)
+// Without any initialization, they'll be discarded
+if verbose {
+    vrb.Init(os.Stderr)
+}
 
 ```
 

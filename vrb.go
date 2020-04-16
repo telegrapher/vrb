@@ -6,15 +6,11 @@ import (
 	"io/ioutil"
 )
 
-var vrbWriter io.Writer
+var vrbWriter = ioutil.Discard
 
 // Public method to initialize the verbose io.Writer
-func Init(vrb bool, wrtr io.Writer) {
-	if vrb == true {
-		vrbWriter = wrtr
-		return
-	}
-	vrbWriter = ioutil.Discard
+func Init(wrtr io.Writer) {
+	vrbWriter = wrtr
 }
 
 // Print usage is equivalent to https://golang.org/pkg/fmt/#Print
