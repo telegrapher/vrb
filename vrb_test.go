@@ -20,7 +20,7 @@ func Test_Verbose(t *testing.T) {
 	if err != nil {
 		t.Error("vrb.Print failed")
 	}
-	if n != 12 {
+	if n != 11 {
 		t.Error("vrb.Print returned n not equal")
 	}
 
@@ -28,7 +28,7 @@ func Test_Verbose(t *testing.T) {
 	if err != nil {
 		t.Error("vrb.Printf failed")
 	}
-	if n != 26 {
+	if n != 25 {
 		t.Error("vrb.Printf returned n not equal")
 	}
 
@@ -36,7 +36,7 @@ func Test_Verbose(t *testing.T) {
 	if err != nil {
 		t.Error("vrb.Println failed")
 	}
-	if n != 14 {
+	if n != 13 {
 		t.Error("vrb.Println returned n not equal")
 	}
 
