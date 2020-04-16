@@ -10,11 +10,11 @@ var vrbWriter io.Writer
 
 // Public method to initialize the verbose io.Writer
 func Init(vrb bool, wrtr io.Writer) {
-	if vrb == false {
-		vrbWriter = ioutil.Discard
+	if vrb == true {
+		vrbWriter = wrtr
 		return
 	}
-	vrbWriter = wrtr
+	vrbWriter = ioutil.Discard
 }
 
 // Print usage is equivalent to https://golang.org/pkg/fmt/#Print
