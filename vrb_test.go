@@ -8,13 +8,13 @@ import (
 )
 
 func Example() {
-	vrb.Init(true, os.Stderr)
+	vrb.Init(os.Stderr)
 	vrb.Println("Verbose message in stderr.")
 }
 
 func Test_Verbose(t *testing.T) {
 
-	vrb.Init(true, os.Stderr)
+	vrb.Init(os.Stderr)
 
 	n, err := vrb.Print("Test Print\n")
 	if err != nil {
